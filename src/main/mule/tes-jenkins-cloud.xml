@@ -5,7 +5,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="d851925b-eabc-4ac4-989c-ef1120a5d049" >
-		<http:listener-connection host="0.0.0.0" port="8081" />
+		<http:listener-connection host="0.0.0.0" port="${http.port}" />
 	</http:listener-config>
 	<flow name="tes-jenkins-cloudFlow" doc:id="d34cbe1b-e04c-4939-a2dc-b5dd5296306e" >
 		<http:listener doc:name="Listener" doc:id="90d2e963-a7bb-4a47-9f0e-be2e3dfe2e6e" config-ref="HTTP_Listener_config" path="/test"/>
