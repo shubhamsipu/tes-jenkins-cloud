@@ -17,15 +17,7 @@
 		<app.runtime>4.1.4</app.runtime>
 		<mule.maven.plugin.version>3.1.6</mule.maven.plugin.version>
 	</properties>
-	<distributionManagement>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>corp1</id>
-      <name>Corporate Repository</name>
-      <url>scp://repo/maven2</url>
-      <layout>default</layout>
-    </repository>
-</distributionManagement>
+
 
 	<build>
 		<plugins>
@@ -46,6 +38,22 @@
 							<key>value</key>
 						</properties>
 					</cloudHubDeployment>
+				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
 				</configuration>
 			</plugin>
 		</plugins>
