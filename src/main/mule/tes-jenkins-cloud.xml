@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="tes-jenkins-cloudFlow" doc:id="d34cbe1b-e04c-4939-a2dc-b5dd5296306e" >
 		<http:listener doc:name="Listener" doc:id="90d2e963-a7bb-4a47-9f0e-be2e3dfe2e6e" config-ref="HTTP_Listener_config" path="/test"/>
 		<set-payload value="trying to deploy in cloud" doc:name="Set Payload" doc:id="b99c01fb-6135-496f-87dc-fc2d3d759122" />
+		<logger level="INFO" doc:name="Logger" doc:id="1b51bfb6-a5f0-4a0d-9e5d-e160874d268c" message="From DEV to QA"/>
 	</flow>
 </mule>
