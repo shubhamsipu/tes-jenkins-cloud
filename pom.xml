@@ -32,7 +32,7 @@
 						<muleVersion>4.1.5</muleVersion>
 						<username>${username}</username>
 						<password>${password}</password>
-						<applicationName>${cloudhub.application.name}</applicationName>
+						<applicationName>${cloudhub.application.name}-${environment}</applicationName>
 						<environment>${environment}</environment>
 						<properties>
 							<key>value</key>
