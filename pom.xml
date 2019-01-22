@@ -13,11 +13,42 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+		<cloudhub.application.name>${cloudhub.properties.env}-${project.artifactId}</cloudhub.application.name> 
+ 
+		
 		<app.runtime>4.1.4</app.runtime>
 		<mule.maven.plugin.version>3.1.6</mule.maven.plugin.version>
 	</properties>
-
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<cloudhub.environment>Dev</cloudhub.environment>
+				<cloudhub.properties.env>dev</cloudhub.properties.env>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<cloudhub.environment>UAT</cloudhub.environment>
+				<cloudhub.properties.env>UAT</cloudhub.properties.env>
+			</properties>
+		</profile>
+		<profile>
+			<id>sandbox</id>
+			<properties>
+				<cloudhub.environment>QA</cloudhub.environment>
+				<cloudhub.properties.env>QA</cloudhub.properties.env>
+			</properties>
+		</profile>
+		<profile>
+			<id>production</id>
+			<properties>
+				<cloudhub.environment>Prod</cloudhub.environment>
+				<cloudhub.properties.env>PRD</cloudhub.properties.env>
+			</properties>
+		</profile>
+	</profiles>
 
 	<build>
 		<plugins>
