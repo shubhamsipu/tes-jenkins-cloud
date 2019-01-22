@@ -34,9 +34,6 @@
 						<password>${password}</password>
 						<applicationName>${cloudhub.application.name}</applicationName>
 						<environment>${cloudhub.environment}</environment>
-						<properties>
-							<env>${cloudhub.properties.env}</env>
-						</properties>
 					</cloudHubDeployment>
 				</configuration>
 				<executions>
