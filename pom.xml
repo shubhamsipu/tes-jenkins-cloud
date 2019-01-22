@@ -33,9 +33,9 @@
 						<username>${username}</username>
 						<password>${password}</password>
 						<applicationName>${cloudhub.application.name}</applicationName>
-						<environment>${environment}</environment>
+						<environment>${cloudhub.environment}</environment>
 						<properties>
-							<mule.env>${environment}</mule.env>
+							<env>${cloudhub.properties.env}</env>
 						</properties>
 					</cloudHubDeployment>
 				</configuration>
