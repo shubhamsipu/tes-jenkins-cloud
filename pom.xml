@@ -33,7 +33,7 @@
 						<username>${username}</username>
 						<password>${password}</password>
 						<applicationName>${cloudhub.application.name}</applicationName>
-						<environment>${cloudhub.environment}</environment>
+						<environment>${environment}</environment>
 					</cloudHubDeployment>
 				</configuration>
 				<executions>
