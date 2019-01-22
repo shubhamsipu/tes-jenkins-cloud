@@ -35,10 +35,17 @@
 			</properties>
 		</profile>
 		<profile>
-			<id>sandbox</id>
+			<id>QA</id>
 			<properties>
 				<cloudhub.environment>QA</cloudhub.environment>
 				<cloudhub.properties.env>QA</cloudhub.properties.env>
+			</properties>
+		</profile>
+		<profile>
+			<id>Sandbox</id>
+			<properties>
+				<cloudhub.environment>Sandbox</cloudhub.environment>
+				<cloudhub.properties.env>Sandbox</cloudhub.properties.env>
 			</properties>
 		</profile>
 		<profile>
